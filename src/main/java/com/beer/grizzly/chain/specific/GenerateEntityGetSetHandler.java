@@ -18,9 +18,7 @@ public class GenerateEntityGetSetHandler extends GenerateChain {
             genPara.setPackageName(genPara.getPackageName());
             genPara.setClassName(genPara.getClassName());
 
-            className = new GenStrategyContext(
-                    genPara.getFreemarkerGenStrategy())
-                    .generate(configuration.produceConfiguration(), genPara);
+            className = new GenStrategyContext(genPara.getFreemarkerGenStrategy()).generate(configuration.produceConfiguration(), genPara);
 
         } catch (Exception e) {
             e.printStackTrace();

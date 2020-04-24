@@ -18,7 +18,7 @@ public class GenerateEntityGetSetStrategy implements FreemarkerGenStrategy {
 
         Map<String, Object> map = new HashMap<>();
 
-        String ftlTemp = "/EntityGetSet.ftl";
+        String ftlTemp = Constant.templatesFilePath + "/EntityGetSet.ftl";
         Template temp = cfg.getTemplate(ftlTemp);
 
         map.put("packageName", genPara.getPackageName());

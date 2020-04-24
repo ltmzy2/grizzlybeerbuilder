@@ -35,11 +35,11 @@ public class Constant {
 
     @Value("${zipfile.path}")
     public void setZipFilePath(String zipFilePath) {
-        zipFilePath = zipFilePath;
+        Constant.zipFilePath = zipFilePath;
     }
 
     @Value("${templatesfile.path}")
-    public void setTemplates(String templates) {
-        templatesFilePath = templates;
+    public void setTemplates(String templatesFilePath) {
+        Constant.templatesFilePath = templatesFilePath;
     }
 }
