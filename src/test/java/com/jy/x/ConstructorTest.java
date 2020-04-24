@@ -1,11 +1,13 @@
 package com.jy.x;
 
 import com.jy.x.entity.Vo;
+import org.junit.Ignore;
 import org.junit.Test;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Constructor;
 
+@Ignore
 public class ConstructorTest {
 
     @Test

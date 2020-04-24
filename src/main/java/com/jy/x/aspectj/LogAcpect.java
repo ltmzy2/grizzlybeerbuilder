@@ -65,22 +65,4 @@ public class LogAcpect {
             "java.lang.Byte", "java.lang.Boolean", "java.lang.Char",
             "java.lang.String", "int", "double", "long", "short", "byte",
             "boolean", "char", "float"};
-
-//    @After("JoinPointConfig.doDelZipAcpect()")
-//    public static void doDelZipAcpect(JoinPoint joinPoint) {
-//        StringBuilder sb = new StringBuilder();
-//        Object[] args = joinPoint.getArgs();
-//        for ( int i = 0; i < args.length; i++ ) {
-//            Object arg = args[i];
-//            String typeName = arg.getClass().getTypeName();
-//            for ( String type : types ) {
-//                if (type.equalsIgnoreCase(typeName)) {
-//                    sb.append(arg + ";");
-//                }else {
-//                    sb.append(getFieldsValue(arg));
-//                }
-//            }
-//        }
-//    }
-
 }
