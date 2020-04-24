@@ -21,12 +21,12 @@
                         sql: sql
                     }),
                     contentType: "application/json;charset=UTF-8",
-                    url: 'https://www.mlgb.cloud/gen/genCode',
+                    url: 'http://203.195.191.189:8080/genCode',
                     dataType: 'json',//服务器返回json格式数据
                     type: 'post',//HTTP请求类型
                     timeout: 10000,//超时时间设置为10秒；
                     success: function (data) {
-                        $('#downCode').attr('href', 'https://www.mlgb.cloud/gen/downCode/' + data.data);
+                        $('#downCode').attr('href', 'http://203.195.191.189:8080/downCode/' + data.data);
                         $('#downCode').text('下载' + data.data);
                         $("#genCode").hide();
                         $("#downCode").show();
@@ -41,7 +41,7 @@
         $(document).ready(function () {
             $('#down').click(function () {
                 var entityName = $("#entityName").val();
-                $('#down').attr('href', 'https://www.mlgb.cloud/gen/genService/' + entityName);
+                $('#down').attr('href', 'http://203.195.191.189:8080/gen/genService/' + entityName);
             });
             $('#downCode').click(function () {
                 $("#genCode").show();
