@@ -1,5 +1,6 @@
 package com.beer.grizzly.strategy.specific;
 
+import com.beer.grizzly.common.Constant;
 import com.beer.grizzly.entity.GenPara;
 import com.beer.grizzly.strategy.FreemarkerGenStrategy;
 import freemarker.template.Configuration;
@@ -24,7 +25,7 @@ public class GenerateEntityGetSetStrategy implements FreemarkerGenStrategy {
         map.put("className", genPara.getClassName());
         map.put("typeList",genPara.getTypeList());
 
-        File dir = new ClassPathResource("/templates").getFile();
+        File dir = new File(Constant.zipFilePath);
         if (!dir.exists()) {
             dir.mkdirs();
         }

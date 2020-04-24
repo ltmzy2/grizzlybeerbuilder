@@ -12,6 +12,7 @@ import com.beer.grizzly.utils.StringUtil;
 import com.beer.grizzly.utils.ZipUtil;
 import com.beer.grizzly.factory.GenConfiguration;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
@@ -95,14 +96,13 @@ public class GenerateService {
      * @author: Jy  2019/8/22 9:52
      */
     private String deleteFile(String className, String zipName) {
-        File file = null;
         String fileName = className + zipName;
         try {
-            file = new ClassPathResource("/templates").getFile();
+            File file = new File(Constant.zipFilePath);
             ZipUtil.zip(file.getAbsolutePath() + "/" + fileName, file.getAbsolutePath());
             log.info("打包ZIP文件完成:{}", fileName);
             ZipUtil.deleteGenFile(file);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return fileName;

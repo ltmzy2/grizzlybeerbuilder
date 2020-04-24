@@ -1,10 +1,14 @@
 package com.beer.grizzly.common;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  * @program: x
  * @author: Jy
  * @create: 2019-08-07 13:38
  **/
+@Component
 public class Constant {
 
     public static final String PACKAGE = "com.shunlu.cloud.service";
@@ -25,4 +29,17 @@ public class Constant {
 
     public static final String ZIP_SYFFIX = ".zip";
 
+    public static String templatesFilePath;
+
+    public static String zipFilePath;
+
+    @Value("${zipfile.path}")
+    public void setZipFilePath(String zipFilePath) {
+        zipFilePath = zipFilePath;
+    }
+
+    @Value("${templatesfile.path}")
+    public void setTemplates(String templates) {
+        templatesFilePath = templates;
+    }
 }
